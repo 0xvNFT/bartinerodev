@@ -1,3 +1,12 @@
+#dashboard {
+
+    .account-grid {
+        li {
+            padding: 0.6rem 0;
+        }
+    }
+}
+
 #single {
 
     padding: 2rem 0;
@@ -8,11 +17,18 @@
         border: 1px solid #f5f5f5;
         background: #f5f5f5;
         border-radius: 4px;
-        min-height: 500px;
+        height: 600px;
         padding: 0;
 
-        img {
-            width: 100%;
+        .card-top {
+            height: 100%;
+            overflow: hidden;
+            img {
+                width: auto;
+                margin: auto;
+                max-height: 100%;
+                max-width: 100%;
+            }
         }
 
     }
@@ -43,14 +59,15 @@
         }
         
         .item-looking {
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             padding: 1rem;
             border-radius: 4px;
-            border: 1px solid #f5f5f5;
+            border: 1px solid black;
 
             h2 {
                 font-weight: bold;
-                font-size: 1rem;
+                font-size: 1.25rem;
+                padding-bottom: 0.6rem;
             }
 
             p {
@@ -88,4 +105,30 @@
         
     }
 
+}
+
+@media (max-width: 771px) {
+    .col-lg-6 {
+
+        border: 1px solid #f5f5f5;
+        background: #f5f5f5;
+        border-radius: 4px;
+        height: auto;
+        padding: 0;
+
+        .card-top {
+            height: auto;
+            img {
+                width: auto;
+                margin: auto;
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+
+    }
+
+    .col-lg-4 {
+        margin-left: 0;
+    }
 }

@@ -12,7 +12,6 @@
     .form-inline {
 
         input[type=search] {
-            width: 35rem;
             border-radius: 4rem;
             background: #eaeaea;
             border: none;
@@ -59,17 +58,17 @@
     
         }
         
-        .nav-item:nth-child(4) {
-            a {
-                padding: 0.5rem 1rem;
-                border: 1px solid black;
-                border-radius: 4px;
-                color: white;
-                background-color: black;
-                font-weight: 500;
-                margin-left: 0.5rem;
-            }
-        }
+        // .nav-item:nth-child(4) {
+        //     a {
+        //         padding: 0.5rem 1rem;
+        //         border: 1px solid black;
+        //         border-radius: 4px;
+        //         color: white;
+        //         background-color: black;
+        //         font-weight: 500;
+        //         margin-left: 0.5rem;
+        //     }
+        // }
 
         .altnav {
 

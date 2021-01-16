@@ -39,6 +39,10 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <form class="form-inline mr-auto ml-auto">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search an item..." aria-label="Search">
+                            {{-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> --}}
+                        </form>
                         <li class="nav-item">
                             <a href="/categories" class="nav-link">Categories</a>
                         </li>
@@ -55,13 +59,13 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Trade') }}</a>
+                                    <a href="{{ route('items.create') }}" class="nav-link altrade">Trade</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->firstname }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -103,14 +107,14 @@
                 <a href="/"><img src="{{ asset('img/bart_logo_solo.svg') }}" class="img-fluid" alt=""></a>
             </div>
 
-            <div class="links d-flex">
+            <div class="links">
 
                 <div class="col-auto">
                     <h4>BARTER</h4>
                     <ul>
-                        <li><a href="/">Categories</a></li>
-                        <li><a href="/">Deals</a></li>
-                        <li><a href="/">Trade</a></li>
+                        <li><a href="/categories">Categories</a></li>
+                        <li><a href="/items">Deals</a></li>
+                        <li><a href="/items/create">Trade</a></li>
                     </ul>
                 </div>
     
@@ -126,24 +130,22 @@
                 <div class="col-auto">
                     <h4>ACCOUNT</h4>
                     <ul>
-                        <li><a href="/">Sign Up</a></li>
-                        <li><a href="/">Log In</a></li>
-                        <li><a href="/">Profile</a></li>
-                        <li><a href="/">Messages</a></li>
+                        <li><a href="/register">Sign Up</a></li>
+                        <li><a href="/login">Log In</a></li>
+                        <li><a href="/dashboard">Profile</a></li>
+                        <li><a href="/dashboard">Messages</a></li>
                     </ul>
                 </div>
     
                 <div class="col-auto">
                     <h4>POLICY CENTER</h4>
                     <ul>
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-and-conditions#privacy-policy">Privacy Policy</a></li>
                         <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
                     </ul>
                 </div>
 
             </div>
-
-            
 
         </div>
 

@@ -167,13 +167,15 @@
             @foreach ($posts as $post)
 
             <div class="card">
+
+                
                 
                 <div class="card-top">
                     <img src="/storage/img/{{$post->images}}" alt="" class="card-img-top">
                 </div>
                 
                 <div class="card-body">
-                    <p>{{ $post->user->name }} • {{ $post->category }} • {{ $post->created_at->diffForHumans() }}</p>
+                    <p>{{ $post->user->username }} • {{ $post->category }} • {{ $post->created_at->diffForHumans() }}</p>
                     <h5 class="card-title">
                         <a href="/items/{{$post->id}}">{{ $post->title }}</a>
                     </h5>
@@ -192,6 +194,8 @@
        
         </div>
 
+        <div class="ld-cta justify-content-center d-flex"><a href="/items" class="cta-regular">View more posts</a></div>
+
     </div>
 
 </section>
@@ -201,39 +205,29 @@
 
         <div class="row justify-content-center">
 
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="card-title">
-                            Why barter?
-                        </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h1 class="card-title">
                             Bartering doesn't<br>involve money.
                         </h1>
-                        <p>Trade an item you own or service you can<br>render for what you want or need.</p>
+                        <p>Trade an item you own or service you can render for what you want or need.</p>
                     </div>
                 </div>
             </div>
     
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h1 class="card-title">
                             Bartering is<br>environment-friendly.
                         </h1>
-                        <p>It not only saves money but also<br>helps reduce waste.</p>
+                        <p>It not only saves money but also helps reduce waste.</p>
                     </div>
                 </div>
             </div>
     
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <h1 class="card-title">
@@ -245,8 +239,8 @@
             </div>
         </div>
 
-        <div class="d-flex align-items-center justify-content-center" style="margin-top: 2rem;">
-            <a href="/about" class="cta-regular" style="margin-right: 1.5rem;">Read more about Bartinero</a>
+        <div class="cta-footer d-flex align-items-center justify-content-center">
+            <a href="/about" class="cta-regular">Read more about Bartinero</a>
             <a href="/register" class="cta-filled">Join the Las Piñas barter community</a>
         </div>
 

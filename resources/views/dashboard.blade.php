@@ -23,7 +23,7 @@
 
         <div class="nav justify-content-between">
             <div class="greeting">
-                <h1>Welcome, {{ auth()->user()->name }}!</h1>
+                <h1>Welcome, {{ auth()->user()->firstname }}!</h1>
                 <p><i class="fas fa-location-arrow"></i>{{ auth()->user()->barangay }}</p>
             </div>
         </div>
@@ -87,8 +87,14 @@
             <div class="account-grid">
 
                 <h3>Account</h3>
+
+                <ul>
+                    <li><a href="">Reset Password</a></li>
+                    <li><a href="">Enable 2FA</a></li>
+                    <li><a href="">Upload Avatar</a></li>
+                </ul>
     
-                <div class="avatar">
+                {{-- <div class="avatar">
     
                     <div class="card-body">
                         <form action="/upload" method="post" enctype="multipart/form-data">
@@ -99,7 +105,7 @@
                     </div> 
     
                 </div>
-    
+     --}}
             </div>
 
         </div>

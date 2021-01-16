@@ -137,10 +137,45 @@
         padding: 0.5rem 0;
     }
 
+    .ld-cta {
+        padding-top: 2.5rem;
+        a {
+            width: 100%;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+        }
+    }
+
     .wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 2rem;
+        margin-top: 1.4rem;
+
+        .card {
+            border-radius: 4px;
+            border: 1px solid black;
+            .card-top {
+                height: 300px;
+                overflow: hidden;
+                border-bottom: 1px solid black;
+                img {
+                    width: auto;
+                    margin: auto;
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            }
+            .card-body {
+                padding: 1rem 1.5rem;
+                .card-title {
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
     }
 
 }
@@ -172,10 +207,11 @@
                 padding: 0;
             }
         }   
+
+        margin: 3rem 0;
     }
 
-    .about-cta {
-        padding-top: 3rem;
+    .cta-footer {
 
         p {
             font-family: 'DM Sans', sans-serif;
@@ -185,16 +221,226 @@
 
         a {
             font-family: "DM Sans", sans-serif;
-            color: white;
+            color: black;
             padding: 0 1rem;
             text-decoration: none;
             padding: 0.75rem 1rem;
-            background-color: black;
             border: 1px solid black;
             border-radius: 4px;
-            letter-spacing: 0.02rem;
             margin: 0 1rem;
         }
+
+        a:nth-child(2) {
+            color: white;
+        }
+    }
+
+}
+
+@media (max-width: 771px) {
+
+    #hero {
+        min-height: 100vh;
+        padding: 2rem 0;
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+        .hero-cta {
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            a:nth-child(1) {
+                margin: 0.5rem;
+                padding: 0.8rem;
+            }
+            a:nth-child(2) {
+                margin: 0.5rem;
+                padding: 0.8rem;
+            }
+        }
+        img {
+            padding: 2rem;
+        }
+    }
+
+    #hero-byline {
+    
+        padding: 2rem;
+        background-color: black;
+
+        .d-flex {
+            display: none;
+        }
+    
+        h1 {
+            font-size: 1.25rem;
+
+        }
+        p {
+            font-family: 'DM Sans', sans-serif;
+            color: white;
+            padding-top: 0.25rem;
+            margin-bottom: 0;
+        }
+        .fa, .fas {
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .byline-icon {
+            margin-right: 1rem;
+        }
+        .byline-text {
+            margin-left: 0.8rem;
+        }
+    }
+
+    #latest-deals {
+        padding: 1rem;
+    
+        .col-lg-3 {
+            border: 1px solid black;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem;
+        }
+    
+        .wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            display: grid;
+            column-gap: 1rem;
+        }
+    
+        .card {
+    
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            background: white;
+            border: 1px solid black;
+    
+            h5 {
+                margin-top: 0.3rem;
+                color: black;
+                font-weight: bold;
+            }
+    
+            span {
+                color: black;
+                font-weight: 500;
+                font-family: 'DM Sans', sans-serif;
+            }
+    
+            .card-top {
+                position: relative;
+    
+                p {
+                    position: absolute;
+                    padding: 0.5rem;
+                    background-color: black;
+                    color: white;
+                    border-radius: 4px;
+                    margin: 0.8rem;
+                    font-size: 0.7rem;
+                }
+            }
+    
+            .card-img-top {
+                border-bottom: 1px solid black;
+            }
+    
+            .card-body {
+                padding: 1rem;
+            }
+        }
+    
+    
+        h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;            
+            color: black;
+        }
+    
+        a {
+            font-family: 'DM Sans', sans-serif;
+            color: black;
+            margin-bottom: 1rem;
+            text-decoration: none;
+        }
+    
+        p {
+            font-family: 'DM Sans', sans-serif;
+            color: #b8b8b8;
+        }
+    
+    }
+
+    #about {
+
+        padding: 1rem;
+    
+        h1 {
+            font-size: 1.25rem;
+            text-align: center;           
+        }
+
+        p {
+            text-align: center;
+        }
+    
+        .row {
+            padding-top: 1rem;
+    
+            .card {
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        .cta-footer {
+            padding: 0;
+    
+            a {
+                width: 100%;
+                margin: 0;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .cat-selector {
+
+        .cat-item {
+            background: #f2f2f2;
+            border-radius: 4px;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .cat-item:nth-child(1) {
+            background: white;
+            border: 1px solid black;
+            color: black;
+        }
+
+
+        a, h3 {
+            margin-bottom: 0;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.6rem;
+        }
+
+        .fa, .fas {
+            font-weight: 900;
+            font-size: 1.25rem;
+            padding-bottom: 0.5rem;
+        }
+
     }
 
 }

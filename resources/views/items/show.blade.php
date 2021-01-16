@@ -10,7 +10,7 @@
 
                 <div class="col-lg-6">
 
-                    <div class="gallery">
+                    <div class="card-top d-flex justify-content-center align-items-center">
 
                         <img src="/storage/img/{{$post->images}}" alt="" class="card-img-top">
 
@@ -45,7 +45,7 @@
                         </div>
 
                         
-                        <p>{{ $post->user->name }} • {{ $post->created_at->diffForHumans() }}</p>
+                        <p>{{ $post->user->username }} • {{ $post->category }} • {{ $post->created_at->diffForHumans() }}</p>
                         <h1>{{ $post->title }}</h1>
 
                     </div>

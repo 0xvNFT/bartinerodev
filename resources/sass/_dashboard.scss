@@ -107,3 +107,14 @@
     }
 
 }
+
+@media (max-width: 771px) {
+    #dashboard {
+        .wrapper {
+            grid-template-columns: 1fr;
+        }
+        .dashboard-grid {
+            margin-bottom: 2rem;
+        }
+    }
+}

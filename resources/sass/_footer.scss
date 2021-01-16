@@ -13,6 +13,9 @@ footer {
         .col-auto {
             margin-left: 5rem;
         }
+        .links {
+            display: flex;
+        }
     }
 
     h4 {
@@ -31,5 +34,16 @@ footer {
            text-align: right;
         }
     }
+}
 
+@media (max-width: 771px) {
+    footer {
+        .links {
+            display: inline !important;
+        }
+        
+        .col-auto {
+            margin-bottom: 1.5rem;
+        }
+    }
 }

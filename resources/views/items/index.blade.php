@@ -11,8 +11,8 @@
                     <h1>Latest deals</h1>
                 </div>
                 <div class="sorting d-flex">
-                    <p>Sort by date</p>
-                    <p>Sort by category</p>
+                    <h4>Sort by date</h4>
+                    <h4>Sort by category</h4>
                 </div>
             </div>
 
@@ -23,14 +23,15 @@
                     @foreach ($posts as $post)
 
                     <div class="card">
-                        
+
+                
+                
                         <div class="card-top">
                             <img src="/storage/img/{{$post->images}}" alt="" class="card-img-top">
                         </div>
                         
                         <div class="card-body">
-                            <a href="" class="user-link">{{ $post->user->name }}</a>
-                            <span>• {{ $post->created_at->diffForHumans() }}</span>
+                        <p>{{ $post->user->username }} • {{ $post->category }} • {{ $post->created_at->diffForHumans() }}</p>
                             <h5 class="card-title">
                                 <a href="/items/{{$post->id}}">{{ $post->title }}</a>
                             </h5>
@@ -48,8 +49,6 @@
                     @endif
 
             </div>
-
-            
 
         </div>
 

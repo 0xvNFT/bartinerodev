@@ -6,7 +6,7 @@
 
     <div class="container">
 
-        <h2>Register</h2>
+        <h2 style="font-size: 2rem">Register</h2>
 
         <div class="row justify-content-center">
 
@@ -180,7 +180,7 @@
                             
                           <input class="form-check-input @error('terms') form-error-inline @enderror" type=checkbox name="terms" id="terms"/>
                           <label class="form-check-label" for="terms">
-                            <a href="/terms-and-conditions">I agree to the Terms and Conditions.</a>
+                            <a href="/terms-and-conditions" style="color: black; margin-left: 0.5rem; text-decoration: underline;">I agree to the Terms and Conditions.</a>
                           </label>
 
                             @error('terms')
@@ -193,10 +193,6 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100">Submit</button>
-
-                    <a href="/terms-and-conditions">testing</a>
-                    <a href="/privacy-policy">testing</a>
-                
                 
                 </form>
 
